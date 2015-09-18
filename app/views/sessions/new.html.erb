@@ -1,0 +1,8 @@
+Log In
+
+
+<%= form_tag("/create", method: "get") do %>
+<%= text_field_tag(:name, '', :placeholder => "NAME") %>
+<%= text_field_tag(:password,'', :placeholder => "PASSWORD") %>
+<%= submit_tag("Log In") %>
+<% end %>

@@ -1,0 +1,9 @@
+new.html.erb
+
+<%= form_for @user do |x| %>
+<%= x.text_field :name, :placeholder => "NAME"%>
+<%= x.text_field :email, :placeholder => "EMAIL" %>
+<%= x.text_field :password, :placeholder => "PASSWORD"%>
+<%= x.submit :create %>
+<% end %>
+
