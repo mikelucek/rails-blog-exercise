@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/' => "home#index"
   get "/search" => "home#search"
   get "/signin" => "sessions#new"
+  get "signout" => "sessions#destroy"
   get "/create" => "sessions#create"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

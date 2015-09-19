@@ -1,3 +1,6 @@
 class User < ActiveRecord::Base
 	has_many :tweets
-end
+
+	scope :hello, -> {puts "hello"}
+	scope :rando, -> {all.sample(1)}
+ end

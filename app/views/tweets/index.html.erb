@@ -1,0 +1,8 @@
+ TWEETS index.html.erb
+
+<ul>
+<%= @tweets.each do |x| %>
+<li> <%= x.tweet %></li>
+<h6>posted by: <%= @users.find(x.user_id).name %> at time: <%= x.updated_at %></h6>
+<% end %>
+</ul>
