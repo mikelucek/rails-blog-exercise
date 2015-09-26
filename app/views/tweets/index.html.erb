@@ -5,5 +5,17 @@
 	<li> <%= x.tweet %></li>
 	<h6>posted by <%= @users.find(x.user_id).name %> -- <%= time_ago_in_words(x.updated_at) %> ago.</h6>
 	<%= link_to_if x.user_id == session[:id], "edit", edit_tweet_path(x) %>
+
+		<h2>add a comment</h2>
+
+		<%= form_for ([x, x.comments.build]) do |y| %>
+		<%= y.text_field :comment %>
+		<%=y.submit %>
+		<% end %>
+
+		<% x.comments.each do |z| %>
+		<%= z.comment %>
+		<% end %>
+
 <% end %>
 </ul>
