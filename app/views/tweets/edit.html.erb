@@ -1,0 +1,7 @@
+edit.html.erb
+Edit your post:
+
+<%= form_for @tweet do |x| %>
+<%= x.text_area :tweet %>
+<%= x.submit :update %>
+<% end %>

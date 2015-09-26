@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :users
   resources :tweets
+  resources :comments
 
   get '/' => "home#index"
   get "/search" => "home#search"

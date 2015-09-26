@@ -23,16 +23,26 @@ class TweetsController < ApplicationController
 		else
 		puts params[:tweet][:tweet]
 		Tweet.create(tweet: params[:tweet][:tweet], user_id: session[:id])
-		redirect_to new_tweet_path
+		redirect_to tweet_path
 		end
 	end
 
 	def edit
+		if session[:id].nil?
+			redirect_to "/signin"
 		#form to edit tweet
+		end
+		@tweet = Tweet.find(params[:id])
 	end
 
 	def update
-		#process edits
+		if session[:id].nil?
+			redirect_to "/signin"
+		else
+			@tweet = Tweet.find(params[:id])
+			@tweet.update(tweet: params[:tweeet][:tweet], user_id: session[:id])
+			redirect_to tweet_path
+		end
 	end
 
 	def destroy
