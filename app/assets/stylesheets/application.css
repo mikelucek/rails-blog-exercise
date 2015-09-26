@@ -19,20 +19,47 @@
  	height: 100%;
  }
 
+ #menu{
+ 	font-size: 16px;
+ 	font-family: sans-serif;
+ 	width: 200px;
+ 	background-color: orange;
+ 	border: 12px solid black;
+ 	margin: 12px;
+ 	border-radius: 12px;
+ 	float: left;
+ 	padding: 12px;
+ 	list-style: none;
+
+ }
+
  #wrapper{
  	font-size: 24px;
  	font-family: sans-serif;
  	width: 600px;
- 	margin: 60px auto;
+ 	margin: 12px;
  	padding: 24px;
  	background-color: orange;
  	border: 24px solid black;
  	border-radius: 12px;
-
+ 	float: left;
+ 
 
  }
 
- #wrapper input{
+ #wrapper ul{
+ 	font-size: 36px;
+ 	list-style: none;
+ }
+
+ #wrapper li{
+ 	font-size: 60px;
+ 	margin-bottom: 0px;
+ }
+
+
+
+ #wrapper input, textarea{
  	display: block;
  	border: 1x black solid;
  	border-radius: 12px;
@@ -40,4 +67,7 @@
  	margin: 12px;
  	padding: 12px;
 }
- }
+
+#wrapper textarea{
+	width: 512px;
+}

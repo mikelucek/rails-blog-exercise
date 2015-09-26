@@ -8,6 +8,28 @@
 </head>
 <body>
 	<div id="body">
+		<div id="menu"
+			<ul>
+				<li><% if session[:id].nil? %>
+					<%=link_to "Sign up", new_user_path %>
+					<% end %>
+				</li>
+				<li><% if session[:id].nil? %>
+					<%=link_to "Sign in", signin_path %>
+					<% end %>
+				</li>
+				<li><% if !session[:id].nil? %>
+					<%=link_to "Sign out", signout_path %>
+					<% end %>
+				</li>
+				<li><% if !session[:id].nil? %>
+					Signed in as <%= User.find(session[:id]).name %>
+					<% end %>
+			</ul>
+		</div>
+
+
+				
 		<div id="wrapper">
 			<%= yield %>
 		</div>
