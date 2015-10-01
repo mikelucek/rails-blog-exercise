@@ -29,8 +29,10 @@
  	border-radius: 12px;
  	float: left;
  	padding: 12px;
- 	list-style: none;
+ }
 
+ #menu ul, li{
+ 	list-style: none;
  }
 
  #wrapper{
@@ -48,13 +50,15 @@
  }
 
  #wrapper ul{
- 	font-size: 36px;
  	list-style: none;
  }
 
  #wrapper li{
  	font-size: 60px;
- 	margin-bottom: 0px;
+ }
+ #wrapper h6{
+ 	margin: 0px;
+ 	padding: 0px;
  }
 
 
@@ -71,3 +75,27 @@
 #wrapper textarea{
 	width: 512px;
 }
+
+#wrapper .comments{
+	margin-left: 120px;
+	font-size: 18px;
+}
+
+#wrapper .comments li {
+	font-size: 18px;
+}
+
+#wrapper .comments h2 {
+	font-size: 22px;
+}
+#wrapper .comments input, textarea{
+	display: inline;
+	font-size: 12px;
+	margin: 6px;
+	padding: 4px;
+	border-radius: 6px;
+}
+
+
+
+

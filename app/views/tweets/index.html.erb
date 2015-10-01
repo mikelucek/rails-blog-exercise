@@ -1,5 +1,3 @@
- TWEETS index.html.erb
-
 <ul>
 <% @tweets.each do |x| %>
 	<li> <%= x.tweet %></li>
@@ -9,17 +7,17 @@
 		<% end %>
 
 	</h6>
-
-		<h2>add a comment</h2>
-
+	<div class="comments">
+		<ul>
+		<% x.comments.each do |z| %>
+		<li><%= z.comment %></li>
+		<% end %>
+		</ul>
 		<%= form_for ([x, x.comments.build]) do |y| %>
 		<%= y.text_field :comment %>
 		<%=y.submit %>
 		<% end %>
-
-		<% x.comments.each do |z| %>
-		<%= z.comment %>
-		<% end %>
+	</div>
 
 <% end %>
 </ul>

@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     resources :comments
   end
 
-  get '/' => "home#index"
+  get '/' => "tweets#index"
   get "/search" => "home#search"
   get "/signin" => "sessions#new"
   get "signout" => "sessions#destroy"

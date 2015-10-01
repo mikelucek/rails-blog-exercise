@@ -1,7 +1,7 @@
 class TweetsController < ApplicationController
 	def index
 		#show all tweets
-		@tweets = Tweet.all
+		@tweets = Tweet.all.order('id desc')
 		@users = User.all
 	end
 
