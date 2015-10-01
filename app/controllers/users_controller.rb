@@ -33,12 +33,15 @@ class UsersController < ApplicationController
 		puts params.inspect
 		@update_user = User.find(params[:id])
 		@update_user.update(user_params)
-		redirect_to edit_user_path @update_user
+		redirect_to "/"
 		
 	end
 
 	def destroy
-		puts "destruction!"
+		@destuction = User.find(session[:id])
+		@destuction.destroy
+		session[:id] = nil
+		redirect_to "/"
 	end
 
 	private

@@ -27,6 +27,14 @@
 					<% end %>
 				</li>
 				<li><% if !session[:id].nil? %>
+					<%=link_to "Edit my profile", edit_user_path(session[:id]) %>
+					<% end %>
+				</li>
+				<li><% if !session[:id].nil? %>
+					<%=link_to "Delete my account", user_path(session[:id]), method: :delete %>
+					<% end %>
+				</li>
+				<li><% if !session[:id].nil? %>
 					<%=link_to "New post", new_tweet_path %>
 					<% end %>
 				</li>

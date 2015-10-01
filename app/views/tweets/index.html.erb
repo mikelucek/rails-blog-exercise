@@ -1,7 +1,9 @@
 <ul>
 <% @tweets.each do |x| %>
 	<li> <%= x.tweet %></li>
-	<h6>posted by <%= @users.find(x.user_id).name %> -- <%= time_ago_in_words(x.updated_at) %> ago.
+	<h6>posted by <% if !@users.where(id: x.user_id).first.nil?%> 
+			<%= @users.find(x.user_id).name %>
+				<% else %> UNKNOWN USER <% end %> -- <%= time_ago_in_words(x.updated_at) %> ago.
 	<% if x.user_id == session[:id] %>
 		<%= link_to "edit", edit_tweet_path(x) %>
 		<% end %>
